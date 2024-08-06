@@ -18,7 +18,7 @@ const Login = () => {
     const handleForm = async e => {
         e.preventDefault()
         try {
-            const res = await axios.post('http://localhost:8080/api/v1/login', dataForm)
+            const res = await axios.post('https://auth-backend-9k38pidjt-ronaks-projects-645ad5b6.vercel.app/api/v1/login', dataForm)
             if (res.data.success === true) {
                 userObj.handleUser()
                 toast.success(res.data.message)
